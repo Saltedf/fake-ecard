@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/card.css" />
+
+    <title>我的民大校友E卡_大连民族大学</title>
+  </head>
+
+  <body>
+    <header></header>
+
+    <main></main>
+
+    <div class="container grid">
+      <img src="./img/title.jpg" class="logo-img" alt="logo" />
+      <img src="./img/card-female1.png" class="card-img" alt="card" />
+      <p class="current-time">
+        <a class="my-box text-box" id="hours-1">0</a>
+        <a class="my-box text-box" id="hours-2">0</a>
+        :
+        <a class="my-box text-box" id="minutes-1">0</a>
+        <a class="my-box text-box" id="minutes-2">0</a>
+        :
+        <a class="my-box text-box" id="seconds-1">0</a>
+        <a class="my-box text-box" id="seconds-2">0</a>
+      </p>
+
+      <p class="date-text" id="date-txt">2024/08/25</p>
+
+      <div class="btns">
+        <a class="my-box btn">修改个人信息</a>
+        <a class="my-box btn">分享</a>
+      </div>
+    </div>
+    <img src="./img/background-lines.png" class="lines" alt="background" />
+    <footer></footer>
+
+    <script>
+      function updateTime() {
+        const now = new Date();
+        const year = String(now.getFullYear());
+        const month = String(now.getMonth()).padStart(2, "0");
+        const date = String(now.getDate()).padStart(2, "0");
+
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+
+        document.getElementById("hours-1").textContent = hours[0];
+        document.getElementById("hours-2").textContent = hours[1];
+        document.getElementById("minutes-1").textContent = minutes[0];
+        document.getElementById("minutes-2").textContent = minutes[1];
+        document.getElementById("seconds-1").textContent = seconds[0];
+        document.getElementById("seconds-2").textContent = seconds[1];
+        document.getElementById("date-txt").textContent =
+          year + "/" + month + "/" + date;
+      }
+
+      // 每秒更新一次时间
+      setInterval(updateTime, 1000);
+
+      // 初次加载时调用一次
+      updateTime();
+    </script>
+  </body>
+</html>

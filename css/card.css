@@ -1,0 +1,99 @@
+/*
+蓝字：#1d1c52
+白字：#f6ffff
+背景蓝色：#1b255e
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: sans-serif;
+}
+body {
+  position: relative;
+  /* width: 100vw; */
+}
+
+.container {
+  max-width: 34rem;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.section-main {
+}
+.grid {
+  display: grid;
+  gap: 3rem;
+  justify-items: center;
+  grid-template-columns: 1fr;
+}
+
+.logo-img {
+  max-width: 100%;
+}
+.card-img {
+  max-width: 100%;
+}
+
+.current-time {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0fr 1fr 1fr 0fr 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  width: 95%;
+  color: #1d1c52;
+}
+
+.my-box {
+  display: inline-block;
+  border: solid;
+  border-color: #1d1c52;
+  border-width: 1px;
+  border-radius: 9px;
+  background-color: white;
+  text-align: center;
+}
+
+.text-box {
+  font-size: 2.3rem;
+  font-weight: 400;
+  padding: 1.2rem 1.2rem;
+}
+
+.date-text {
+  font-size: 1.5rem;
+  color: #1d1c52;
+}
+
+.btns {
+  margin-top: 3rem;
+  display: grid;
+  row-gap: 1rem;
+  color: #1d1c52;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 400;
+
+  padding: 1.2rem 12rem;
+}
+
+.lines {
+  position: absolute;
+  max-width: 100%;
+  top: 100%;
+  left: 50%;
+
+  transform: translate(-50%, -60%);
+  z-index: -1;
+}
